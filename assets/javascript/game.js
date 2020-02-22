@@ -15,11 +15,16 @@
 $(document).ready(function() {
   // assign variables
 
-  var targetNumber;
-  var crystal1;
-  var crystal2;
-  var crystal3;
-  var crystal4;
+  var targetNumber = targetNumber = Math.floor(Math.random() * 101 + 19);
+  //console.log(targetNumber);
+  var crystal1 = Math.floor(Math.random() * 11 + 1);
+  //console.log(crystal1);
+  var crystal2 = Math.floor(Math.random() * 11 + 1);
+  //console.log(crystal2);
+  var crystal3 = Math.floor(Math.random() * 11 + 1);
+  //console.log(crystal3);
+  var crystal4 = Math.floor(Math.random() * 11 + 1);
+  //console.log(crystal4);
   var userTotal;
   var wins = 0;
   var losses = 0;
@@ -31,6 +36,7 @@ $(document).ready(function() {
     crystal3 = Math.floor(Math.random() * 11 + 1);
     crystal4 = Math.floor(Math.random() * 11 + 1);
     targetNumber = Math.floor(Math.random() * 101 + 19);
+    
     userTotal = 0;
     $("#total-score").text(userTotal);
     $("#target-score").text(targetNumber);
@@ -47,6 +53,7 @@ $(document).ready(function() {
     $("#losses").text(losses);
     $("#total-score").text(userTotal);
   }
+  // function if user wins or loses
   function winsLoss() {
     if (userTotal === targetNumber) {
       alert("You Win!");
