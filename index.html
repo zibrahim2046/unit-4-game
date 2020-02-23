@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CrystalCollector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -11,10 +12,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    ></script>
+
     <script src="assets/javascript/game.js"></script>
   </head>
   <body>
@@ -47,22 +45,40 @@
       </div>
 
       <div class="randomNumber">
-        <span id="targetNumber"></span>
-        Target Number:
+        Target Number:<span id="targetNumber"></span>
       </div>
       <div class="winsAndLosses">
-        <h4>Wins:  <span id="wins"></span></h4>
-        <h4>Losses:  <span id="losses"></span></h4>
+        <h4>Wins: <span id="wins"></span></h4>
+        <h4>Losses: <span id="losses"></span></h4>
       </div>
       <div class="crystals">
-        <img src="assets/images/blue_crystal.jpg" alt="blue" class="img" id="blue">
-        <img src="assets/images/green_crystal.jpg" alt="green" class="img" id="green">
-        <img src="assets/images/red_crystal.jpg" alt="red" class="img" id="red">
-        <img src="assets/images/yellow_crystal.jpg" alt="yellow" class="img" id="yellow">
+        <img
+          src="assets/images/blue_crystal.jpg"
+          alt="blue"
+          class="img"
+          id="blue"
+        />
+        <img
+          src="assets/images/green_crystal.jpg"
+          alt="green"
+          class="img"
+          id="green"
+        />
+        <img
+          src="assets/images/red_crystal.jpg"
+          alt="red"
+          class="img"
+          id="red"
+        />
+        <img
+          src="assets/images/yellow_crystal.jpg"
+          alt="yellow"
+          class="img"
+          id="yellow"
+        />
       </div>
       <div class="totalScore">
-        <span id="total-score"></span>
-        Total Score:
+        <h1>Total Score:<span id="totalScore"></span></h1>
       </div>
     </div>
   </body>

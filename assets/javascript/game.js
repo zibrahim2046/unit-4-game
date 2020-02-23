@@ -15,7 +15,7 @@
 $(document).ready(function() {
   // assign variables
 
-  var targetNumber = targetNumber = Math.floor(Math.random() * 101 + 19);
+  var targetNumber = (targetNumber = Math.floor(Math.random() * 101 + 19));
   console.log(targetNumber);
   var crystal1 = Math.floor(Math.random() * 11 + 1);
   console.log(crystal1);
@@ -25,23 +25,25 @@ $(document).ready(function() {
   console.log(crystal3);
   var crystal4 = Math.floor(Math.random() * 11 + 1);
   console.log(crystal4);
-  var userTotal;
+  var userTotal = 0;
   var wins = 0;
   var losses = 0;
 
   // reset function
+
   function reset() {
     crystal1 = Math.floor(Math.random() * 11 + 1);
     crystal2 = Math.floor(Math.random() * 11 + 1);
     crystal3 = Math.floor(Math.random() * 11 + 1);
     crystal4 = Math.floor(Math.random() * 11 + 1);
     targetNumber = Math.floor(Math.random() * 101 + 19);
-    
+
     userTotal = 0;
     $("#totalScore").text(userTotal);
     $("#randomNumber").text(targetNumber);
   }
   // game start function
+
   function initialize() {
     crystal1 = Math.floor(Math.random() * 11 + 1);
     crystal2 = Math.floor(Math.random() * 11 + 1);
@@ -54,19 +56,45 @@ $(document).ready(function() {
     $("#totalScore").text(userTotal);
   }
   // function if user wins or loses
+
   function winsLoss() {
     if (userTotal === targetNumber) {
       alert("You Win!");
       reset();
       wins++;
       $("#wins").text(wins);
-    }
-    else if (userTotal > targetNumber) {
-        alert ("You Lose!");
-        reset();
-        losses++;
-
+    } else if (userTotal > targetNumber) {
+      alert("You Lose!");
+      reset();
+      losses++;
     }
   }
   initialize();
+
+  // onclick functions for each crystal
+
+  $("#blue").on("Click", function() {
+    userTotal = userTotal + crystal1;
+    $("totalScore").text(userTotal);
+    console.log(userTotal);
+    winsLoss();
+  });
+  $("#green").on("Click", function() {
+    userTotal = userTotal + crystal2;
+    $("totalScore").text(userTotal);
+    console.log(userTotal);
+    winsLoss();
+  });
+  $("#red").on("Click", function() {
+    userTotal = userTotal + crystal3;
+    $("totalScore").text(userTotal);
+    console.log(userTotal);
+    winsLoss();
+  });
+  $("#yellow").on("Click", function() {
+    userTotal = userTotal + crystal4;
+    $("totalScore").text(userTotal);
+    console.log(userTotal);
+    winsLoss();
+  });
 });
